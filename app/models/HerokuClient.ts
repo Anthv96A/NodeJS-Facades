@@ -2,9 +2,11 @@
 
 export class HerokuClient {
     tryAndConnectToHeroku(): boolean{
-        return true;
+        const rnd = Math.random() * 10;
+        return rnd > 5 ? true : false;
     }
     tryAndDisconnectFromHeroku(): boolean{
-        return true;
+        const rnd = Math.random() * 10;
+        return rnd > 5 ? true : false;
     }
 }

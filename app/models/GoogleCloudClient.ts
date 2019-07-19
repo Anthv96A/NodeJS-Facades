@@ -3,10 +3,12 @@
 export class GoogleCloudClient {
 
     tryAndConnectToGoogleCloud(): boolean{
-        return true;
+        const rnd = Math.random() * 10;
+        return rnd > 5 ? true : false;
     }
 
     tryAndDisconnectFromGoogleCloud(): boolean{
-        return true;
+        const rnd = Math.random() * 10;
+        return rnd > 5 ? true : false;
     }
 }

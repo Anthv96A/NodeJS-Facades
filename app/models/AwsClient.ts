@@ -3,10 +3,12 @@
 export class AwsClient {
 
     tryAndConnectToAWS(): boolean{
-        return true;
+        const rnd = Math.random() * 10;
+        return rnd > 5 ? true : false;
     }
 
     tryAndDisconnectFromAWS(): boolean{
-        return true;
+        const rnd = Math.random() * 10;
+        return rnd > 5 ? true : false;
     }
 }

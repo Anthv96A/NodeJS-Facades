@@ -9,6 +9,8 @@ export class HerokuClientFacade implements IClientFacade {
         const result = await Promise.resolve(this.herokuClient.tryAndConnectToHeroku());
         if(result)
             console.log('Connected to Heroku!!');
+        else 
+            console.log('Failed to connect to Heroku!');
         return result;
     }  
     
@@ -16,6 +18,8 @@ export class HerokuClientFacade implements IClientFacade {
         const result = await Promise.resolve(this.herokuClient.tryAndDisconnectFromHeroku());
         if(result)
             console.log('Disconnected from Heroku!!');
+        else 
+            console.log('Failed to connect to Heroku!');
         return result;
     }
 }

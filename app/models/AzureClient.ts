@@ -3,10 +3,12 @@
 export class AzureClient {
 
     tryAndConnectToAzure(): boolean{
-        return true;
+        const rnd = Math.random() * 10;
+        return rnd > 5 ? true : false;
     }
 
     tryAndDisconnectFromAzure(): boolean{
-        return true;
+        const rnd = Math.random() * 10;
+        return rnd > 5 ? true : false;
     }
 }

@@ -9,6 +9,8 @@ export class GoogleCloudClientFacacde implements IClientFacade {
         const result: boolean = await Promise.resolve(this.googleCloudClient.tryAndConnectToGoogleCloud());
         if(result)
             console.log('Connected to Google cloud!!');
+        else 
+            console.log('Failed to connect to Google Cloud');
         return result;
     }    
     
@@ -16,6 +18,8 @@ export class GoogleCloudClientFacacde implements IClientFacade {
         const result: boolean = await Promise.resolve(this.googleCloudClient.tryAndDisconnectFromGoogleCloud());
         if(result)
              console.log('Disconnected from Google cloud!!');
+        else 
+             console.log('Failed to disconnect to Google Cloud');
         return result;
     }
 }

@@ -9,6 +9,8 @@ export class AzureClientFacade implements IClientFacade{
 
         if(result)
             console.log('Connected to Azure successfully!!');
+        else 
+            console.log('Failed to connect to Azure');
         return result;
     }
     async disconnect(): Promise<boolean> {
@@ -16,6 +18,8 @@ export class AzureClientFacade implements IClientFacade{
 
         if(result)
             console.log('Disconnected from Azure successfully!!');
+        else 
+            console.log('Failed to disconnect from Azure');
         return result;
     }
 }

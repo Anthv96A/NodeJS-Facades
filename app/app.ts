@@ -3,7 +3,11 @@ import { DatabaseProvider } from "./databaseProvider";
 import { ConnectionClient } from "./client.enum";
 
 (async()=> {
-    await initialize();
+    try {
+        await initialize();
+    } catch (error) {
+        console.log('Booo we got here');
+    }
 })();
 
 // The facade is kinda of like a factory, where the logic is abstracted away

@@ -14,6 +14,9 @@ export class DatabaseProvider{
         try {
             const client: IClientFacade = this.clientProvider.getClient(clientConnector);
             const result:boolean = await client.connect();
+            if(!result)
+                throw 'Connection failed!';
+                
             return result;
         } catch (error) {
             console.log(`Failed to connect to DB! Error : ${error}`);
